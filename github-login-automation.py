@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 import time 
 
 bridge = webdriver.Chrome()
+bridge.implicitly_wait(10)
 bridge.get("https://www.github.com/login")
+bridge.maximize_window()
 
 username = bridge.find_element(By.ID, 'login_field')
 username.send_keys('charan1739')
